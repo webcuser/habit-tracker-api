@@ -32,3 +32,7 @@ def delete_habit(habit_id: int):
     global habits
     habits = [h for h in habits if h.id != habit_id]
     return {'detail': 'Habit removed'}
+
+@app.get('/api/test')
+def test_endpoint():
+    return {'message': 'Success'}
